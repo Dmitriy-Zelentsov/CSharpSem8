@@ -35,16 +35,16 @@ int[,] TransporateMatrix(int[,] arr)
     {
         for (int column = 0; column < arr.GetLength(1); column++)
         {
-           transMatrix[column, row] = arr[row, column];
+             transMatrix[column, row] = arr[row, column];
         }
     }
     return transMatrix;
 }
 
-int[,] array = CreateMatrix(5, 3, 2, 3);
+int[,] array = CreateMatrix(5, 3, 1, 3);
 PrintMatrix(array);
 Console.WriteLine();
-TransporateMatrix(array);
-PrintMatrix(array);
+int[,] transMatrix = TransporateMatrix(array);
+PrintMatrix(transMatrix);
 
 
